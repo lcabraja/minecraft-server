@@ -3,9 +3,9 @@
 This template shows how to setup a Minecraft server as a `systemd` service, with RCON, tty support and optional log display to screen.
 
 ## Setup
-### #1 Server
+### Server
 create the directory `/srv/minecraft` and put your server files there, renaming the executable to `server.jar`
-### #2 User, Group
+### User, Group
 Following best practices, create a user, and group to run the server
 ```bash
 groupadd minecraft

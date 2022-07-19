@@ -1,0 +1,17 @@
+[Unit]
+Description=Minecraft Server
+
+[Service]
+User=minecraft
+Group=minecraft
+WorkingDirectory=/srv/minecraft
+ExecStart=/usr/bin/java -Xmx7000M -Xms7000M -jar /srv/minecraft/server.jar nogui
+RestartSec=10
+Restart=always
+Sockets=minecraft.socket
+StandardInput=socket
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
